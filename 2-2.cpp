@@ -24,7 +24,7 @@ bool Initsize(List& l) {
 
 bool createrlist(List& l) {
 	if (l.length >= l.capacity) {
-		cout << "±íÂúÁË" << endl;
+		cout << "è¡¨æ»¡äº†" << endl;
 		return false;
 	}
 	srand((time(0)));
@@ -33,7 +33,7 @@ bool createrlist(List& l) {
 		l.data[i] = temp;
 		l.length++;
 	}
-	cout << "Ëæ»ú±í´´½¨³É¹¦" << endl;
+	cout << "éšæœºè¡¨åˆ›å»ºæˆåŠŸ" << endl;
 	return true;
 }
 
@@ -53,7 +53,7 @@ void printlist(List l) {
 		cout << "list is empty" << endl;
 		return;
 	}
-	cout << "±íÖÐÓÐ:" ;
+	cout << "è¡¨ä¸­æœ‰:" ;
 	for (int i = 0; i < l.length; i++) {
 		cout << l.data[i] << " " ;
 	}
@@ -123,12 +123,12 @@ void Q4(List& l) {
 		return;
 	}
 	int s, t;
-	cout << "ÇëÊäÈëÆðÊ¼Öµ" << endl;
+	cout << "è¯·è¾“å…¥èµ·å§‹å€¼" << endl;
 	cin >> s;
-	cout << "ÇëÊäÈë½áÊøÖµ" << endl;
+	cout << "è¯·è¾“å…¥ç»“æŸå€¼" << endl;
 	cin >> t;
 	if (s < 0 || t>100) {
-		cout << "·¶Î§²»ºÏÀí" << endl;
+		cout << "èŒƒå›´ä¸åˆç†" << endl;
 		return;
 	}
 	for (int i = 0; i < l.length; i++) {
@@ -165,12 +165,12 @@ List Q6(List& l1,List& l2) {
 	for (int i = 0; i < temp.length; i++) {
 		if (l1.data[j] <= l2.data[k] && j < l1.length) {
 			temp.data[i] = l1.data[j];
-			//cout<<"NUMj: "<< j << " NOW: " << temp.data[i] << endl; ÓÃÓÚ¼ìÑéµ±Ç°Öµ,ÎÞÊµ¼ÊÒâÒå
+			//cout<<"NUMj: "<< j << " NOW: " << temp.data[i] << endl; ç”¨äºŽæ£€éªŒå½“å‰å€¼,æ— å®žé™…æ„ä¹‰
 			j++;
 		}
 		else if (l2.data[k] < l1.data[j] && k < l2.length) {
 			temp.data[i] = l2.data[k];
-			//cout<<"NUMk: "<< k << " NOW: " << temp.data[i] << endl; ÓÃÓÚ¼ìÑéµ±Ç°Öµ,ÎÞÊµ¼ÊÒâÒå
+			//cout<<"NUMk: "<< k << " NOW: " << temp.data[i] << endl; ç”¨äºŽæ£€éªŒå½“å‰å€¼,æ— å®žé™…æ„ä¹‰
 			k++;
 		}	
 		else if (j == l1.length) {
@@ -193,7 +193,7 @@ void Q2010(int a[],int p) {
 		a[MAXSIZE - 1 - i] = temp;
 	}
 	//cout << endl;
-	//cout << "µÚÒ»´ÎÄæÖÃÊý×éÎª: ";
+	//cout << "ç¬¬ä¸€æ¬¡é€†ç½®æ•°ç»„ä¸º: ";
 	//for (int i = 0; i < MAXSIZE; i++) {
 	//	cout << a[i] << " ";
 	//}
@@ -203,7 +203,7 @@ void Q2010(int a[],int p) {
 		a[j] = a[MAXSIZE - p - 1 - j];
 		a[MAXSIZE - p - 1 - j] = temp;
 	}
-	//cout << "µÚ¶þ´ÎÄæÖÃÊý×éÎª: ";
+	//cout << "ç¬¬äºŒæ¬¡é€†ç½®æ•°ç»„ä¸º: ";
 	//for (int i = 0; i < MAXSIZE; i++) {
 	//	cout << a[i] << " ";
 	//}
@@ -262,7 +262,7 @@ int Q2013(int a[]) {
 	return -1;
 }
 
-int Q2018(int a[]) { //maxsize¼´Îªn
+int Q2018(int a[]) { //maxsizeå³ä¸ºn
 	int min = 0,max = 0,s=0;
 	int b[MAXSIZE];
 	for (int o = 0; o < MAXSIZE; o++) {
@@ -299,7 +299,7 @@ int main() {
 	
 	
 	//Q1
-	//cout << "±»É¾ÔªËØÊÇ"<< Q1(l) << endl;
+	//cout << "è¢«åˆ å…ƒç´ æ˜¯"<< Q1(l) << endl;
 
 	//Q2
 	//Q2(l);
@@ -333,7 +333,7 @@ int main() {
 	//Q2010
 	//int a[10] = { 1,2,3,4,5,6,7,8,9,10 };
 	//Q2010(a, 4);
-	//cout << "×ª±äºóÊý×éÎª: ";
+	//cout << "è½¬å˜åŽæ•°ç»„ä¸º: ";
 	//for (int i = 0; i < MAXSIZE; i++) {
 	//	cout << a[i] << " ";
 	//}
@@ -342,16 +342,16 @@ int main() {
 	/*int L = 5;
 	int a[5] = { 1,2,3,4,11 };
 	int b[5]= { 6,7,8,9,10 };
-	cout<<"ÖÐÎ»ÊýÊÇ: "<< Q2011(a, b, L)<<endl;*/
+	cout<<"ä¸­ä½æ•°æ˜¯: "<< Q2011(a, b, L)<<endl;*/
 
 
 	//Q2013
 	//int a[10] = { 3,1,1,2,1,1,2,1,4,6 };
-	//cout<<"Ö÷ÔªËØÊÇ: "<<Q2013(a)<<endl;
+	//cout<<"ä¸»å…ƒç´ æ˜¯: "<<Q2013(a)<<endl;
 
 	//Q2018
 	int a[10] = { 1,2,3,4,5,6,7,8,9,11 };
-	cout << "×îÐ¡ÕýÕûÊý: " << Q2018(a) << endl;
+	cout << "æœ€å°æ­£æ•´æ•°: " << Q2018(a) << endl;
 
 
 	return 0;
